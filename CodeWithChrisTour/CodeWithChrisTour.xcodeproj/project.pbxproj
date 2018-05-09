@@ -297,6 +297,7 @@
 				2F1D9FD52095F98400CC8957 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
