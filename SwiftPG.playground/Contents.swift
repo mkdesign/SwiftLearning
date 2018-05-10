@@ -6,46 +6,35 @@ var str = "Hello, playground"
 
 class person {
     
-    var name : String = "initial Name"
+    var age = 15
+    var name = "Tom"
     
-    init (){
-        
+    func updateAgeandName (updatedAge :Int , updatedName:String){
+        age=updatedAge
+        name = updatedName
     }
     
-    func walk (){
-        print ("I'm walking")
+    func increaseAge (increaseBy: Int) -> Int{
+       age += increaseBy
+        
+        return age
+    }
+    
+    class func averageAge () -> Int {
+        return 50
     }
 }
 
-var a = person()
-a.name = "Alice"
-a.walk()
+var a  = person()
+a.age
+a.name
+a.updateAgeandName(updatedAge: 25, updatedName: "Tim")
+a.age
+a.name
 
-class superhuman : person {
-    var egoName : String = "Clark"
-    
-    override init(){
-        super.init()
-        super.name = "mehrad"
-        
-    }
-    
-    func fly (){
-        print("i'm flying")
-    }
-    
-    override func walk(){
-        print("I'm walking really fast")
-        
-        super.walk()
-    }
-}
+var b = a.increaseAge(increaseBy: 5)
 
-var b = superhuman()
-b.walk()
-
-
-
+person.averageAge()
 
 
 
