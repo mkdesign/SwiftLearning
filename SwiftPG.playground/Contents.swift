@@ -4,24 +4,49 @@ import UIKit
 
 var str = "Hello, playground"
 
-class Person {
+class person {
     
-    var name : String = "Initizlized name"
-    init() {
-        self.sayCheese()
+    var name : String = "initial Name"
+    
+    init (){
+        
     }
     
-    func sayCheese () {
-        print("Cheese!")
+    func walk (){
+        print ("I'm walking")
     }
 }
 
-var firstPerson = Person()
-firstPerson.name = "Alice"
-firstPerson.name
+var a = person()
+a.name = "Alice"
+a.walk()
 
-var secondPerson = Person()
-secondPerson.name = "Bob"
+class superhuman : person {
+    var egoName : String = "Clark"
+    
+    override init(){
+        super.init()
+        super.name = "mehrad"
+        
+    }
+    
+    func fly (){
+        print("i'm flying")
+    }
+    
+    override func walk(){
+        print("I'm walking really fast")
+        
+        super.walk()
+    }
+}
 
-firstPerson.name
+var b = superhuman()
+b.walk()
+
+
+
+
+
+
 
