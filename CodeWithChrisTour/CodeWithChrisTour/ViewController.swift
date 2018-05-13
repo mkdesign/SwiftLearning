@@ -27,10 +27,19 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
     
     @IBAction func dealTapped (sender: UIButton) {
-        print("deal tapped")
+        
+        //randomize right number from 2 to 10
+        let rightRandNo = arc4random_uniform(9) + 2
+        
+        rightImageView.image = UIImage(named: "card\(rightRandNo)")
+        
+        let leftRandNo = arc4random_uniform(9) + 2
+        //randomize left number from 2 to 10
+        
+        leftImageView.image = UIImage(named: "card\(leftRandNo)")
+        
     }
 }
 
